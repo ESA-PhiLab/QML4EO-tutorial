@@ -1,5 +1,6 @@
 from tqdm.auto import tqdm
 from torch import nn
+import torch
 
 class Encoder(nn.Module):
     def __init__(self, encoded_space_dim,fc2_input_dim):
@@ -29,7 +30,7 @@ class Encoder(nn.Module):
         x = self.flatten(x)
         x = self.encoder_lin(x)
         return x
-        
+
 class Decoder(nn.Module):
     
     def __init__(self, encoded_space_dim,fc2_input_dim):
