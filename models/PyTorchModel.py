@@ -1,10 +1,11 @@
+from utils.DatasetHandler import DatasetHandler
+
 from sklearn.metrics import confusion_matrix, classification_report
 from utils.utils import print_CF
 import matplotlib.pyplot as plt
 from torchinfo import summary
 from tqdm.auto import tqdm
 import torch
-
 
 class PyTorchModel:
 
@@ -14,7 +15,9 @@ class PyTorchModel:
         self.optimizer  = optimizer
 
         self.tra_losses = [0] + []
-        self.val_losses = [0] + [] 
+        self.val_losses = [0] + []
+
+        self.dh = DatasetHandler(None)
 
     def summary(self, shape):
         print(summary(self.model, shape))
@@ -42,8 +45,8 @@ class PyTorchModel:
         esct = 0
 
         for epoch in pb:
-            tra_dl  = iter(dh.data_loader(tra_imgs, tra_lbls, batch_size=batch_size, img_shape=(64,64,3)))
-            val_dl  = iter(dh.data_loader(val_imgs, val_lbls, batch_size=batch_size, img_shape=(64,64,3)))
+            tra_dl  = iter(self.dh.data_loader(tra_imgs, tra_lbls, batch_size=batch_size, img_shape=(64,64,3)))
+            val_dl  = iter(self.dh.data_loader(val_imgs, val_lbls, batch_size=batch_size, img_shape=(64,64,3)))
             
             ## Training
             tra_loss = 0.0
