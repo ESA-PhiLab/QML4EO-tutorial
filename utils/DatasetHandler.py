@@ -22,8 +22,7 @@ class DatasetHandler:
         # Initialize images path and images label lists
         imgs_path = []
         imgs_label = []
-
-
+        
         # For each class in the class list
         for c in classes:
             # List all the images in that class
@@ -63,8 +62,7 @@ class DatasetHandler:
                 # Fill the vectors with images and labels
                 img = plt.imread(imgs_path[index])
                 img = cv2.resize(img, (img_shape[0], img_shape[1]))
-                if img.max() >= 100:
-                    img = img/255.0
+                if img.max() >= 100: img = img/255.0
                 batch_in[i, ...] = np.transpose(img)
                 batch_out[i] = imgs_label[index]
             # Yield/Return the image and labeld vectors

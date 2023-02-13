@@ -13,7 +13,7 @@ def create_QC_OUTPUTS():
     measurements = list(itertools.product([0, 1], repeat=NUM_QUBITS))
     return [''.join([str(bit) for bit in measurement]) for measurement in measurements]
 
-QC_OUTPUTS = create_QC_OUTPUTS()
+QC_OUTPUTS     = create_QC_OUTPUTS()
 NUM_QC_OUTPUTS = len(QC_OUTPUTS)
 
 SIMULATOR = qiskit.Aer.get_backend('qasm_simulator')
