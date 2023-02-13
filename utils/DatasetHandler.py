@@ -11,7 +11,7 @@ from config import *
 class DatasetHandler:
     def __init__(self, dataset_path):
         self.dataset_path = dataset_path
-        self.classes = glob.glob(os.path.join(dataset_path, '*'))
+        if dataset_path is not None: self.classes = glob.glob(os.path.join(dataset_path, '*'))
     
     def print_classes(self):
         print('Classes: ') 
