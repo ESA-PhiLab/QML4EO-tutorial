@@ -1,6 +1,19 @@
 import numpy as np
 
 def print_CF(cf, classes):
+    '''
+        Print the confusion matrix
+
+        Parameters
+        ----------
+        - cf: confusion matrix
+        - classes: class names
+
+        Returns
+        -------
+        Nothing, it prints the confusion matrix
+    
+    '''
     
     classes2 = []
     
