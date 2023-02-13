@@ -77,7 +77,7 @@ class PyTorchModel:
                     loss    = self.criterion(outputs, y)
 
                     targets.append(y.item())
-                    predictions.append(outputs.item())
+                    predictions.append(network.predict(x).item())
 
                     l = loss.item()
                     val_loss += l
