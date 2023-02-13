@@ -4,9 +4,9 @@ import qiskit
 import os
 
 #----------------------- Quantum Circuit Settings -----------------------
-NUM_QUBITS     = 4
-NUM_SHOTS      = 100
-NUM_LAYERS     = 1
+NUM_QUBITS     = 6
+NUM_SHOTS      = 1
+NUM_LAYERS     = 6
 SHIFT          = np.pi/4
 
 def create_QC_OUTPUTS():
