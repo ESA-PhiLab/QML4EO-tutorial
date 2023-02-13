@@ -25,7 +25,7 @@ class HybridNet(nn.Module):
         x = self.qc(x[0])  # QUANTUM LAYER
         x = F.relu(x)
         x = self.fc2(x.float())
-        x = F.softmax(x, 1)
+        #x = F.softmax(x, 1)
         return x
 
     def predict(self, x):

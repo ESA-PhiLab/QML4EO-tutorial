@@ -40,7 +40,7 @@ CLASS_DICT = {
 #----------------------- Training Settings -----------------------
 TRAINING        = True
 LOAD_CHECKPOINT = False
-EPOCHS          = 100
+EPOCHS          = 20
 LEARNING_RATE   = 0.002
 MOMENTUM        = 0.5
 BATCH_SIZE      = 16
