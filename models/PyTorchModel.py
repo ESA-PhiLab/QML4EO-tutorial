@@ -29,7 +29,7 @@ class PyTorchModel:
         plt.legend()
         plt.show()
         
-    def fit(self, epochs, tra_set, val_set, batch_size=1, es=None, classes = classes, tra_size = None, val_size = None):
+    def fit(self, epochs, tra_set, val_set, classes, batch_size=1, es=None, tra_size = None, val_size = None):
 
         tra_imgs = tra_set[0]
         tra_lbls = tra_set[1]
