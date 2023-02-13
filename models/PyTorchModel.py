@@ -33,7 +33,6 @@ class PyTorchModel:
 
         tra_imgs = tra_set[0]
         tra_lbls = tra_set[1]
-        tra_size = len(tra_imgs)
 
         val_imgs = val_set[0]
         val_lbls = val_set[1]
