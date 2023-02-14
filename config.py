@@ -19,7 +19,7 @@ NUM_QC_OUTPUTS  = len(QC_OUTPUTS)
 SIMULATOR       = qiskit.Aer.get_backend('qasm_simulator')
 
 #----------------------- Dataset Settings -----------------------
-DATASET_ROOT    = os.path.join('content','EuroSAT')
+DATASET_ROOT    = os.path.join(os.sep, 'content','EuroSAT')
 SPLIT_FACTOR    = 0.2
 
 CLASS_DICT      = {
