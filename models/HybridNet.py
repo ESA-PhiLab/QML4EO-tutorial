@@ -7,7 +7,8 @@ from config import *
 
 class HybridNet(nn.Module):
     '''
-        Hybrid Quantum Convolutional Neural Network (PyTorch - Qiskit)
+        Hybrid Quantum Convolutional Neural Network (PyTorch - Qiskit).
+        Modified version of LeNet-5
     '''
 
     def __init__(self):
