@@ -5,10 +5,34 @@ import torch
 from config import *
 
 class TorchCircuit(Function):
+    '''
+        PyTorch wrapper for QiskitCircuit.
+
+        A pytorch layer always has two functions. One for the forward pass and one for the backward pass. 
+        
+        - The forward pass simply takes the Quantum Circuits variational parameters from the previous pytorch layer and runs the circuit
+           on the defined hardware (defined in QiskitCircuit.run()) and returns the measurements from the quantum hardware. These measurements 
+           will be the inputs of the next pytorch layer.
+        - The backward pass returns the gradients of the quantum circuit.
+    
+    '''
     @staticmethod
     def forward(ctx, i):
+        '''
+            Forward pass of quantum circuit
+
+            Parameters
+            ----------
+            - ctx: 
+            - i:
+
+            Returns
+            -------
+            - result: quantum circuit output
+        '''
+
         if not hasattr(ctx, 'QiskitCirc'):
-            ctx.QiskitCirc = QiskitCircuit(NUM_QUBITS, SIMULATOR, shots=NUM_SHOTS)
+            ctx.QiskitCirc = QiskitCircuit()
 
         exp_value = ctx.QiskitCirc.run(i)
         result = torch.tensor([exp_value])
@@ -17,6 +41,19 @@ class TorchCircuit(Function):
 
     @staticmethod
     def backward(ctx, grad_output):
+        '''
+            The backward pass returns the gradients of the quantum circuit.
+
+            Parameters
+            ----------
+            - ctx:
+            - grad_output:
+
+            Returns
+            -------
+            - result: gradients of the quantum circuit
+        
+        '''
         forward_tensor, i = ctx.saved_tensors
         input_numbers = i
         gradients = torch.Tensor()
