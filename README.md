@@ -1,7 +1,10 @@
 # QML4EO-tutorial: Hybrid Quantum Convolutional Neural Network Classifier
 
 This tutorial is meant to be done in google colab
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alessandrosebastianelli/QML-tutorial/HQCNN.ipynb)
+
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/alessandrosebastianelli/QML4EO-tutorial/blob/main/HQCNN.ipynb)
+
 
 In any case you can run everything on your hardare, but keep attention to the enviroment (so skip cells that want to install packages) (follow the [requirements file](requirements.txt)). Moreover you need to adjust paths both in [config file](config.py) and at the beginning of the [notebook](HQCNN.ipynb).
 
