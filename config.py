@@ -4,26 +4,26 @@ import qiskit
 import os
 
 #----------------------- Quantum Circuit Settings -----------------------
-NUM_QUBITS     = 6
-NUM_SHOTS      = 1
-NUM_LAYERS     = 6
-SHIFT          = np.pi/4
+NUM_QUBITS      = 6
+NUM_SHOTS       = 100
+NUM_LAYERS      = 3
+SHIFT           = np.pi/4
 
 def create_QC_OUTPUTS():
     measurements = list(itertools.product([0, 1], repeat=NUM_QUBITS))
     return [''.join([str(bit) for bit in measurement]) for measurement in measurements]
 
-QC_OUTPUTS     = create_QC_OUTPUTS()
-NUM_QC_OUTPUTS = len(QC_OUTPUTS)
+QC_OUTPUTS      = create_QC_OUTPUTS()
+NUM_QC_OUTPUTS  = len(QC_OUTPUTS)
 
-SIMULATOR = qiskit.Aer.get_backend('qasm_simulator')
+SIMULATOR       = qiskit.Aer.get_backend('qasm_simulator')
 
 #----------------------- Dataset Settings -----------------------
-training_root   = os.path.join( 'datasets', 'EuroSAT', 'training')
-validation_root = os.path.join( 'datasets', 'EuroSAT', 'validation')
+DATASET_ROOT    = s.path.join('content','EuroSAT')
+SPLIT_FACTOR    = 0.2
 
 
-CLASS_DICT = {
+CLASS_DICT      = {
     "AnnualCrop":           0,
     "Forest":               1,
     "HerbaceousVegetation": 2,
@@ -43,6 +43,6 @@ LOAD_CHECKPOINT = False
 EPOCHS          = 20
 LEARNING_RATE   = 0.002
 MOMENTUM        = 0.5
-BATCH_SIZE      = 16
+BATCH_SIZE      = 1
 CLASSES         = len(CLASS_DICT)
 
