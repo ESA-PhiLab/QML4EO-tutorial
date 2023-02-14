@@ -18,7 +18,7 @@ class HybridNet(nn.Module):
 
             Parameters
             ----------
-            Nothing
+            Nothing, it uses config file
 
             Returns
             -------
