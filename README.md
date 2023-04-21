@@ -18,7 +18,7 @@ Before running the [notebook](HQCNN.ipynb) you must check the [config file](conf
 - Training settings: here you can modify parameters like learning rate, momentum, etc.
 
 ## Main references
-
+- **Sebastianelli, A., Del Rosso, M. P., Ullo, S. L., & Gamba, P. (2023). On Quantum Hyperparameters Selection in Hybrid Classifiers for Earth Observation Data.**
 - **Sebastianelli, A., Zaidenberg, D. A., Spiller, D., Le Saux, B., & Ullo, S. L. (2021). On circuit-based hybrid quantum neural networks for remote sensing imagery classification. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 15, 565-580.**
 - **Zaidenberg, D. A., Sebastianelli, A., Spiller, D., Le Saux, B., & Ullo, S. L. (2021, July). Advantages and bottlenecks of quantum machine learning for remote sensing. In 2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS (pp. 5680-5683). IEEE.**
 - Eurosat: A novel dataset and deep learning benchmark for land use and land cover classification. Patrick Helber, Benjamin Bischke, Andreas Dengel, Damian Borth. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2019.
