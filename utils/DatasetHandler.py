@@ -4,7 +4,7 @@ import random
 import torch
 import glob
 import os
-import cv2
+# import cv2
 
 from config import *
 
@@ -187,7 +187,7 @@ class DatasetHandler:
                 index = random.randint(0, len(imgs_path)-1)
                 # Fill the vectors with images and labels
                 img = plt.imread(imgs_path[index])
-                img = cv2.resize(img, (img_shape[0], img_shape[1]))
+                # img = cv2.resize(img, (img_shape[0], img_shape[1]))
                 if img.max() >= 100: img = img/255.0
                 batch_in[i, ...] = np.transpose(img)
                 batch_out[i] = imgs_label[index]
