@@ -4,7 +4,7 @@ import random
 import torch
 import glob
 import os
-# import cv2
+import cv2
 
 from config import *
 
